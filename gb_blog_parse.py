@@ -107,7 +107,7 @@ class GbBlogParse:
 
 if __name__ == '__main__':
     mongo_client = pymongo.MongoClient('mongodb://localhost:27017')
-    db = mongo_client.gb_data_mining_26_04_2021
+    db = mongo_client['gb_data_mining_26_04_2021']
     collection = db['gb_blog_parse']
     parser = GbBlogParse('https://gb.ru/posts', collection)
     parser.run()
